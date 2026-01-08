@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product Details</h1><hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Cost</th>
+                <th>Action</th>
+            </tr>
+        </thead> 
+        {% for pd in p %}
+        <tbody>
+        
+            <tr>
+                <td>{{pd[0]}}</td>
+                <td>{{pd[1]}}</td>
+                <td>{{pd[2]}}</td>
+            </tr>
+            <td>
+                <a href="/delete/{{pd[0]}}">Delete</a>
+                <a href="/delete/{{pd[1]}}">Edit</a>
+            </td>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>

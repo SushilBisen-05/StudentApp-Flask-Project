@@ -1,0 +1,153 @@
+/* ===== Global Styles ===== */
+body {
+    background-color: #f4f6f9;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+}
+
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+    color: #e9ecef !important;
+    margin-right: 10px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.navbar .btn-outline-success {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #fff;
+    color: #0d6efd;
+}
+
+/* ===== Main Container ===== */
+.container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* ===== Jumbotron / Card Style ===== */
+.jumbotron {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.jumbotron h1 {
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.jumbotron p.lead {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* ===== Table Styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #0d6efd;
+}
+
+thead th {
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.95rem;
+}
+
+tbody tr:hover {
+    background-color: #f1f5ff;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.btn-dangar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-dangar:hover {
+    background-color: #bb2d3b;
+    color: #fff;
+}
+
+.btn-outline-success {
+    border-width: 1.5px;
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        padding: 10px;
+    }
+
+    tbody td {
+        border: none;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #0d6efd;
+    }
+}
