@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #cbb4d4, #9fa4c4);
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 230px;
+            background: rgba(255,255,255,0.25);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .sidebar a.active,
+        .sidebar a:hover {
+            background: #7f3df1;
+            color: white;
+        }
+        .card-custom {
+            background: rgba(255,255,255,0.35);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .btn-custom {
+            border-radius: 30px;
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="d-flex">
+
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column align-items-start">
+        <h4 class="mb-4">🏦 Bank of India</h4>
+
+        <a href="/dashboard" class="active">Dashboard</a>
+        <a href="/profile">Profile</a>
+        <a href="/deposit">Deposit</a>
+        <a href="/withdraw">Withdraw</a>
+        <a href="/transactions">Transactions</a>
+        <!-- <a href="/logout" class="text-danger">Logout</a> -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-5">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <!-- <h4>Customer Dashboard</h4> -->
+            <br>
+            <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+        </div>
+
+        <div class="card card-custom p-5 text-center">
+
+            <h1 class="mb-3">Welcome, {{ user[1] }}</h1>
+            <p class="text-muted">Manage your bank account securely</p>
+
+            <h3 class="mt-4">
+                💰 Balance: ₹ {{ user[9] }}
+            </h3>
+
+            <div class="mt-4">
+                <a href="/deposit" class="btn btn-success btn-custom me-2">Deposit</a>
+                <a href="/withdraw" class="btn btn-warning btn-custom me-2">Withdraw</a>
+                <a href="/transactions" class="btn btn-info btn-custom">Transactions</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Purple Gradient Background */
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Top Black Navbar */
+    .custom-nav {
+        background: #212529;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        color: white;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50px;
+        z-index: 1000;
+    }
+
+    /* Centering the Form */
+    .content-wrapper {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 60px;
+        width: 100%;
+    }
+
+    /* Card Styling (Matching Profile Page) */
+    .card {
+        border-radius: 0px; 
+        overflow: hidden;
+        border: none;
+        background: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .card-header {
+        background-color: #764ba2 !important; /* Blue header */
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
+
+<div class="custom-nav">
+    <div style="font-size: 1.2rem; font-weight: 500;">
+        <span style="margin-right: 10px;">🏦</span> Bank of India
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="mb-0">Withdraw Money</h3>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Enter name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Amount (₹)</label>
+                    <input type="number" name="amount" class="form-control" placeholder="Enter amount" required min="1">
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning py-2 fw-bold shadow-sm text-dark">
+                        Confirm Withdraw
+                    </button>
+                    <a href="/dashboard" class="btn btn-outline-secondary btn-sm">Back to Dashboard</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
